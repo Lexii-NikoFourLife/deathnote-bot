@@ -270,167 +270,173 @@ bot.on('message', message => {
           return message.channel.send(
             ":x: **| Vous n'avez pas la permission d'éxécuter cette commande!**"
           );
-        if (collected.first().content == 1) {
-          message.reply(
-            'Vous ne pouvez pas commencer une partie sans Light Yagami'
-          );
-        } else if (collected.first().content == 2) {
-          if (roles.misa.activated == true) {
-            message.channel.send('Vous venez de désactiver Misa Amane');
-            roles.misa.activated = false;
-            neededPlayers -= 1;
+        let words = collected.first().content.split(' ');
+        for (i = 0; i < words.length; i++) {
+          parseInt(words[i]);
+        }
+        console.log(words);
+        for (j = 0; j < words.length; j++) {
+          if (words[j] == 1) {
+            message.reply(
+              'Vous ne pouvez pas commencer une partie sans Light Yagami'
+            );
+          } else if (words[j] == 2) {
+            if (roles.misa.activated == true) {
+              message.channel.send('Vous venez de désactiver Misa Amane');
+              roles.misa.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Misa Amane');
+              roles.misa.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 3) {
+            if (roles.mikami.activated == true) {
+              message.channel.send('Vous venez de désactiver Teru Mikami');
+              roles.mikami.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Teru Mikami');
+              roles.mikami.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 4) {
+            if (roles.l.activated == true) {
+              message.channel.send('Vous venez de désactiver L');
+              roles.l.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.l.send('Vous venez de réactiver L');
+              roles.light.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 5) {
+            if (roles.soichiroyagami.activated == true) {
+              message.channel.send('Vous venez de désactiver Soichiro Yagami');
+              roles.soichiroyagami.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Soichiro Yagami');
+              roles.soichiroyagami.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 6) {
+            if (roles.matsuda.activated == true) {
+              message.channel.send('Vous venez de désactiver Tôta Matsuda');
+              roles.matsuda.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Tôta Matsuda');
+              roles.matsuda.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 7) {
+            if (roles.aizawa.activated == true) {
+              message.channel.send('Vous venez de désactiver Shûichi Aizawa');
+              roles.aizawa.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Shûichi Aizawa');
+              roles.aizawa.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 8) {
+            if (roles.watari.activated == true) {
+              message.channel.send('Vous venez de désactiver Watari');
+              roles.watari.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Watari');
+              roles.watari.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 9) {
+            if (roles.mogi.activated == true) {
+              message.channel.send('Vous venez de désactiver Kanzô Mogi');
+              roles.mogi.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Kanzô Mogi');
+              roles.mogi.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 10) {
+            if (roles.near.activated == true) {
+              message.channel.send('Vous venez de désactiver Near');
+              roles.near.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Near');
+              roles.near.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 11) {
+            if (roles.gevanni.activated == true) {
+              message.channel.send('Vous venez de désactiver Stephen Gevanni');
+              roles.gevanni.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Stephen Gevanni');
+              roles.gevanni.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 12) {
+            if (roles.mello.activated == true) {
+              message.channel.send('Vous venez de désactiver Mello');
+              roles.mello.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Mello');
+              roles.mello.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 13) {
+            if (roles.matt.activated == true) {
+              message.channel.send('Vous venez de désactiver Matt');
+              roles.matt.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Matt');
+              roles.matt.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 14) {
+            if (roles.rem.activated == true) {
+              message.channel.send('Vous venez de désactiver Rem');
+              roles.rem.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Rem');
+              roles.rem.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 15) {
+            if (roles.ryuk.activated == true) {
+              message.channel.send('Vous venez de désactiver Ryuk');
+              roles.ryuk.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Ryuk');
+              roles.ryuk.activated = true;
+              neededPlayers += 1;
+            }
+          } else if (words[j] == 16) {
+            if (roles.tagada.activated == true) {
+              message.channel.send('Vous venez de désactiver Kiyomi Takada');
+              roles.tagada.activated = false;
+              neededPlayers -= 1;
+            } else {
+              message.channel.send('Vous venez de réactiver Kiyomi Takada');
+              roles.tagada.activated = true;
+              neededPlayers += 1;
+            }
           } else {
-            message.channel.send('Vous venez de réactiver Misa Amane');
-            roles.misa.activated = true;
-            neededPlayers += 1;
+            message.channel.send('Veuillez choisir un nombre dans la liste');
           }
-        } else if (collected.first().content == 3) {
-          if (roles.mikami.activated == true) {
-            message.channel.send('Vous venez de désactiver Teru Mikami');
-            roles.mikami.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Teru Mikami');
-            roles.mikami.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 4) {
-          if (roles.l.activated == true) {
-            message.channel.send('Vous venez de désactiver L');
-            roles.l.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.l.send('Vous venez de réactiver L');
-            roles.light.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 5) {
-          if (roles.soichiroyagami.activated == true) {
-            message.channel.send('Vous venez de désactiver Soichiro Yagami');
-            roles.soichiroyagami.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Soichiro Yagami');
-            roles.soichiroyagami.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 6) {
-          if (roles.matsuda.activated == true) {
-            message.channel.send('Vous venez de désactiver Tôta Matsuda');
-            roles.matsuda.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Tôta Matsuda');
-            roles.matsuda.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 7) {
-          if (roles.aizawa.activated == true) {
-            message.channel.send('Vous venez de désactiver Shûichi Aizawa');
-            roles.aizawa.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Shûichi Aizawa');
-            roles.aizawa.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 8) {
-          if (roles.watari.activated == true) {
-            message.channel.send('Vous venez de désactiver Watari');
-            roles.watari.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Watari');
-            roles.watari.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 9) {
-          if (roles.mogi.activated == true) {
-            message.channel.send('Vous venez de désactiver Kanzô Mogi');
-            roles.mogi.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Kanzô Mogi');
-            roles.mogi.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 10) {
-          if (roles.near.activated == true) {
-            message.channel.send('Vous venez de désactiver Near');
-            roles.near.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Near');
-            roles.near.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 11) {
-          if (roles.gevanni.activated == true) {
-            message.channel.send('Vous venez de désactiver Stephen Gevanni');
-            roles.gevanni.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Stephen Gevanni');
-            roles.gevanni.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 12) {
-          if (roles.mello.activated == true) {
-            message.channel.send('Vous venez de désactiver Mello');
-            roles.mello.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Mello');
-            roles.mello.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 13) {
-          if (roles.matt.activated == true) {
-            message.channel.send('Vous venez de désactiver Matt');
-            roles.matt.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Matt');
-            roles.matt.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 14) {
-          if (roles.rem.activated == true) {
-            message.channel.send('Vous venez de désactiver Rem');
-            roles.rem.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Rem');
-            roles.rem.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 15) {
-          if (roles.ryuk.activated == true) {
-            message.channel.send('Vous venez de désactiver Ryuk');
-            roles.ryuk.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Ryuk');
-            roles.ryuk.activated = true;
-            neededPlayers += 1;
-          }
-        } else if (collected.first().content == 16) {
-          if (roles.tagada.activated == true) {
-            message.channel.send('Vous venez de désactiver Kiyomi Takada');
-            roles.tagada.activated = false;
-            neededPlayers -= 1;
-          } else {
-            message.channel.send('Vous venez de réactiver Kiyomi Takada');
-            roles.tagada.activated = true;
-            neededPlayers += 1;
-          }
-        } else {
-          message.channel.send('Veuillez choisir un nombre dans la liste');
         }
       });
   }
 });
-
 //Commande !start
 bot.on('message', message => {
   if (message.content === '!start') {
