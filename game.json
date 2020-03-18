@@ -1,0 +1,201 @@
+{
+  "players": [],
+  "roles": [
+    {
+      "light": {
+        "id": 1,
+        "name": "Light Yagami",
+        "role": "Kira",
+        "description": "Chaque nuit il cherche Kiyomi Takada, le porte parole de Kira, pour qu'elle viennent grossir le rang des Kiras.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "kira",
+        "solo": false,
+        "locker": 0,
+        "activated": true
+      },
+      "misa": {
+        "id": 2,
+        "name": "Misa Amane",
+        "role": "Kira",
+        "description": "Chaque nuit, elle désigne 3 personnes pour chercher Light afin de le rejoindre pour qu'ils puissent tuer ensemble. \n Elle n'aura aucune information sur les joueurs qu'elle sondera, elle sera simplement informé lorsqu'elle trouvera Light.     \n   Elle ne peut se servir de son Death Note tant qu'elle n'a pas retrouvé Light.    \n Si tous les Kiras sont morts et qu'elle n'a pas retrouvé Light, elle peut utiliser son Death Note. \n Si quand elle n'a pas encore retrouvé Light elle est la victime des Kiras, alors elle ne mourra pas.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "kira",
+        "solo": false,
+        "locker": 0,
+        "activated": true
+      },
+      "mikami": {
+        "id": 3,
+        "name": "Teru Mikami",
+        "role": "X-Kira",
+        "description": "Dès le début de la partie, il est aux cotés de Light. \n Une seule fois dans la partie il peut sonder un joueur, il connaitra alors le rôle exact de la personne sondée.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "kira",
+        "solo": false,
+        "activated": true
+      },
+      "l": {
+        "id": 4,
+        "name": "L",
+        "role": "L'Ancien",
+        "description": "Il résiste à la première attaque des Kiras. Si il est lyncher par le village, alors la voyante, la sorcière, le garde du corps et le manipulateur sont privés de leur pouvoir pendant 2 nuits, UNIQUEMENT si ils ont voté contre lui au bûcher. Si l'ancien est lynché le jour 1, les spés cités si-dessus récupèrent leur pouvoir en nuit 3.",
+        "nightRole": false,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "soichiroyagami": {
+        "id": 5,
+        "name": "Sôichiro Yagami",
+        "role": "La Justice",
+        "description": "Il pourra une fois dans la partie faire grâce à un condamné au lynchage ( lui y compris ) et le laisser en vie. Il sera annoncé qu'il n'y à pas de mort au bucher.",
+        "nightRole": false,
+        "calling": ".",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "matsuda": {
+        "id": 6,
+        "name": "Tôta Matsuda",
+        "role": "L'idiot du village",
+        "description": "Il peut survivre au bûcher, dès lors il perd son droit de vote pour le restant de la partie. Si il était maire, il cède ce rôle au joueur de son choix.",
+        "nightRole": false,
+        "calling": ".",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "aizawa": {
+        "id": 7,
+        "name": "Shûichi Aizawa",
+        "role": "La Sorcière",
+        "description": "Il possède deux objets qu'il utilisera la nuit. Il n'est pas obligé de les utiliser en même temps.\n-Une gomme magique, la « Death Eraser », qui permet de gommer le nom écrit par les Kiras pendant la nuit. Tant qu'il ne l'a pas utilisé il continuera à recevoir le nom de la victime. \n -Un poignard, pour tuer un joueur .",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "watari": {
+        "id": 8,
+        "name": "Watari ",
+        "role": "Le Manipulateur",
+        "description": "Deux fois dans la partie il peut manipuler les votes du bûcher. Il doit agir de nuit pour que sa manipulation apparaisse le lendeamin. \n -Une fois en manipulant le vote d'un joueur qui sera forcé de voter contre un joueur désigné par Watari. ( le joueur manipulé n'en sera pas informé, c'est à lui de déduire, ce qu'il s'est passé. ) \n -Une fois en faisant voter un mort de la partie contre la personne de son choix, si il ne me désigne pas le pseudo du joueurs votant, je le choisirais. ( là encore, les joueurs n'en seront pas informés. )",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "mogi": {
+        "id": 9,
+        "name": "Kanzô Mogi",
+        "role": "Le Garde du corps",
+        "description": "Chaque nuit jusqu'à sa mort, il pourra assommer un joueur. Les actions nocturnes de celui-ci sont immédiatement annulée. Le joueur assommé sera informé dans la nuit qu'il ne peut agir. ( nb: si il assomme l'ancien, et que cette même nuit, les kiras décident pour la première fois de tuer l'ancien, alors ce dernier mourra. ) \n il ne peut assomer deux nuits de suite le même joueur.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "near": {
+        "id": 10,
+        "name": "Near",
+        "role": "Le Salvateur",
+        "description": "Chaque nuit il pourra me désigner un joueur qui sera alors protégé de l'attaque des Kiras. Il ne peut désigner deux nuits de suite le même joueur, il peut se protéger lui-même.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "gevanni": {
+        "id": 11,
+        "name": "Stephen Gevanni",
+        "role": "Le Trompeur",
+        "description": "Il a fabriqué un faux Death Note ( qui est donc inefficace ) dans le but de remplacer celui de Light ou de Misa. Chaque nuit, il tentera de voler un des deux death note pour le remplacer, si il y parvient, les Kiras seront donc en possession d'un faux death note inefficace, mais ils n'en sauront rien. Il n'a fait qu'une copie de death note, il ne peut donc en remplacer qu'un seul.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "mello": {
+        "id": 12,
+        "name": "Mello",
+        "role": "Le Voldeur de Death Note",
+        "description": "Chaque nuit, il tentera de voler un des deux Death Note, si il y arrive, le Death Note volé est retrouvé le matin aux cotés de la victime.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "matt": {
+        "id": 13,
+        "name": "Matt",
+        "role": "Le Chasseur",
+        "description": "A sa mort, il dégainera son arme et entrainera avec lui la personne qu'il aura ciblé.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "rem": {
+        "id": 14,
+        "name": "Rem",
+        "role": "La Voyante",
+        "description": "Chaque nuit elle sonde une personne, je lui dirais alors si le joueur sondé est gentil ou méchant.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "gentils",
+        "solo": false,
+        "activated": true
+      },
+      "ryuk": {
+        "id": 15,
+        "name": "Ryuk",
+        "role": "L'assassin",
+        "description": "Chaque nuit, il me désignera 0, 1 ou 2 joueurs qui seront dés lors entrainé dans une orgie de pomme toute la nuit. Au petit matin, les fêtards seront devenue des accrocs à la pomme. Les nouveaux accrocs recevront un message leur annonçant avec qui ils ont été à cette fête, mais ils ne connaitront pas le nom des autres accrocs.\n Le but de Ryuk est de rendre tous les joueurs vivants accrocs à la pomme, une fois fait, il gagne seul la partie.",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "seul",
+        "solo": true,
+        "activated": true
+      },
+      "tagada": {
+        "id": 16,
+        "name": "Kyomi Tagada",
+        "role": "La Porte Parole de Kira",
+        "description": "Tant que Light ne lui a pas donné quelques pages de son Death Note, elle n'a pas le pouvoir de tuer. Chaque nuit, elle choisi de diffuser les informations que les joueurs lui auront envoyés individuellement et anonymement par mon intermédiaire. ( ce pouvoir est actif qu'elle soit recruté ou non) Elle est considérée comme « gentille » tant qu'elle ne possède pas les pages du Death Note. Si Light meurt, elle ne peut plus être recrutée.\n        Lors de la nuit trois, elle doit faire un choix: gagner avec les Kira ou avec les gentils. Light ne connaitra pas son choix. Si elle est recruté avant la nuit 3 ( en nuit 1 ou 2 ), alors elle rejoins immédiatement les Kiras. Si lorsqu'elle n'est pas recruté elle est la victime des kiras, alors elle ne mourra pas, sauf si elle à fait le choix de gagner avec les « gentils »",
+        "nightRole": true,
+        "calling": "",
+        "player": [],
+        "team": "seul",
+        "solo": true,
+        "activated": true
+      }
+    }
+  ]
+}
