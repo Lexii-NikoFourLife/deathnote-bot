@@ -198,7 +198,7 @@ function check() {
 bot.on('message', message => {
   check();
   if (message.content === '!config') {
-    message.channel.send(
+    /* message.channel.send(
       ' ```Voici la configuration actuelle . Choisis les roles que tu veux activer/désactiver ' +
         ` \n1-Light Yagami(Kira)(${l1})  ` +
         ` \n2-Misa Amane(La deuxième kira)(${m2}) ` +
@@ -218,7 +218,44 @@ bot.on('message', message => {
         `\n16-Kiyomi Takada(La porte parole de Light)(${t16})` +
         `\nIl y a ${neededPlayers} roles activés` +
         '```'
-    );
+    );*/
+    let configEmbed = new Discord.MessageEmbed()
+      .setColor('#B71C1C')
+      .setTitle('Configuration des rôles')
+      .setAuthor(
+        'Death Note Bot',
+        'https://live.staticflickr.com/3145/3070889272_1980468e7c.jpg'
+      )
+      .setDescription(
+        'Voici la configuration actuelle . Choisis les roles que tu veux activer/désactiver'
+      )
+      .addField(
+        'Les rôles',
+        ` \n1-Light Yagami(Kira)(${l1})  ` +
+          ` \n2-Misa Amane(La deuxième kira)(${m2}) ` +
+          `\n3-Teru Mikami(X-Kira)(${t3})` +
+          `\n4-L(L'ancien)(${l4})` +
+          `\n5-Soichiro Yagami(La justice)(${s5})` +
+          `\n6-Tôta Matsuda(L'idiot)(${m6})` +
+          `\n7-Shûichi Aizawa(La sorcière)(${a7})` +
+          `\n8-Watari(Le manipulateur)(${w8})` +
+          `\n9-Kanzô Mogi(Le garde du corps)(${m9})` +
+          `\n10-Near(Salvateur)(${n10})` +
+          `\n11-Stephen Gevanni(Le trompeur)(${g11})` +
+          `\n12-Mello(Le voleur de death note)(${m12})` +
+          `\n13-Matt(Chasseur)(${m13})` +
+          `\n14-Rem(Voyante)(${r14})` +
+          `\n15-Ryuk(L'assassin)(${r15})` +
+          `\n16-Kiyomi Takada(La porte parole de Light)(${t16})`,
+        true
+      )
+      .addField(
+        'Nombre de rôles activés',
+        `Il y a ${neededPlayers} roles activés`,
+        true
+      )
+      .setFooter('Ce bot a été créé par Lexii et WiNoName');
+    message.channel.send(configEmbed);
     const filter = m => m.author.id === message.author.id;
 
     const answer = message.channel
@@ -229,7 +266,10 @@ bot.on('message', message => {
         errors: ['time', 'maxMatches']
       })
       .then(collected => {
-        // console.log(collected.first().content);
+        if (!message.member.hasPermission('ADMINISTRATOR'))
+          return message.channel.send(
+            ":x: **| Vous n'avez pas la permission d'éxécuter cette commande!**"
+          );
         if (collected.first().content == 1) {
           message.reply(
             'Vous ne pouvez pas commencer une partie sans Light Yagami'
